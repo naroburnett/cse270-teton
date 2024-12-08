@@ -3,7 +3,7 @@ import pytest
 from unittest.mock import patch
 
 def test_unauthorized_access(mocker):
-    url = "http://127.0.0.1:5500/users"
+    url = "http://127.0.0.1:8000/users"
     params = {
         "username": "admin",
         "password": "admin"
@@ -20,7 +20,7 @@ def test_unauthorized_access(mocker):
     assert response.text == ""
 
 def test_authorized_access(mocker):
-    url = "http://127.0.0.1:5500/users"
+    url = "http://127.0.0.1:8000/users"
     params = {
         "username": "admin",
         "password": "qwerty"
